@@ -1,0 +1,5 @@
+[build]
+  command = "npm ci && npm run build"
+  publish = "dist/capsule-devlab/browser"
+[build.environment]
+  NODE_VERSION = "20"
