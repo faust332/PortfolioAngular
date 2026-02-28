@@ -337,12 +337,7 @@
         </section>
 
       <!-- LIGHTBOX POUR LES IMAGES -->
-      <div class="image-lightbox" *ngIf="selectedImage()" (click)="closeImage()">
-        <div class="image-lightbox-content" (click)="$event.stopPropagation()">
-          <button class="lightbox-close" (click)="closeImage()">✕</button>
-          <img [src]="selectedImage()!" alt="Image projet agrandie" />
-        </div>
-       </div>
+      <img-grandir #lb></img-grandir>
       </main>         
     </div>           
   </div>            
