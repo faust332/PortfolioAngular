@@ -14,7 +14,7 @@ import { AgrandirComponent } from '../agrandir/agrandir';
 export class SingeComponent {
   @ViewChild('lb') lb!: AgrandirComponent;
 
-  readonly base = 'images/vaisseau';
+  readonly base = 'images/singe';
   readonly images = ['singe1.png','singe2.png','singe3.png']
     .map((f) => `${this.base}/${f}`);
 
