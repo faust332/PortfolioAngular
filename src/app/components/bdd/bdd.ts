@@ -14,8 +14,9 @@ import { AgrandirComponent } from '../agrandir/agrandir';
 export class bddComponent {
   @ViewChild('lb') lb!: AgrandirComponent;
 
-  readonly base = 'images/vaisseau';
-  readonly images = ['bdd1.png','bdd2.png','bdd3.png'].map((f) => `${this.base}/${f}`);
+  readonly base = 'images/bdd';
+  readonly images = ['bdd1.png','bdd2.png','bdd3.png']
+  .map((f) => `${this.base}/${f}`);
 
   openImage(src: string) { this.lb.openImage(src); }
   onImgError(ev: Event) { console.log('Image not found:', (ev.target as HTMLImageElement).src); }
