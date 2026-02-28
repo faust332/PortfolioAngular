@@ -2,15 +2,17 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { NgFor, NgIf } from '@angular/common';
 import { ContactComponent } from '../contact/contact';
+import { AgrandirComponent } from '../agrandir/agrandir';
 
 @Component({
   selector: 'app-formation',
   standalone: true,
-  imports: [RouterLink, NgFor, NgIf, ContactComponent],
+  imports: [RouterLink, NgFor, NgIf, ContactComponent, AgrandirComponent],
   templateUrl: './formation.html',
   styleUrl: './formation.css',
 })
 export class formationComponent {
+  @ViewChild('lb') lb!: AgrandirComponent;
   readonly base = 'images/formation';
 
   readonly images = [
@@ -19,23 +21,6 @@ export class formationComponent {
     'formation3.png',
   ].map((f) => `${this.base}/${f}`);
   
-  lightboxOpen = false;
-  lightboxImage: string | null = null;
-  
-  openImage(src: string) {
-    //console.log('OPEN', src);
-    this.lightboxImage = src;
-    this.lightboxOpen = true; 
-  }
-
-  closeImage() {
-    this.lightboxOpen = false;
-    this.lightboxImage = null;
-  }
-
-  // Debug
-  onImgError(ev: Event) {
-    const img = ev.target as HTMLImageElement;
-    console.log('Image not found:', img.src);
-  }
+  openImage(src: string) { this.lb.openImage(src); }
+  onImgError(ev: Event) { console.log('Image not found:', (ev.target as HTMLImageElement).src); }
 }
