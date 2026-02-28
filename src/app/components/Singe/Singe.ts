@@ -15,7 +15,7 @@ export class SingeComponent {
   @ViewChild('lb') lb!: AgrandirComponent;
 
   readonly base = 'images/vaisseau';
-  readonly images = ['vaisseau1.png', 'vaisseau2.avif', 'vaisseau3.avif']
+  readonly images = ['singe1.png','singe2.png','singe3.png']
     .map((f) => `${this.base}/${f}`);
 
   openImage(src: string) { this.lb.openImage(src); }
