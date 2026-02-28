@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: radial-gradient(circle at top, #0f2027, #203a43, #2c5364);
+  color: #e0e0e0;
+}
+
+main {
+  padding: 2rem;
+}
+
+h1, h2 {
+  color: #00bcd4;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}

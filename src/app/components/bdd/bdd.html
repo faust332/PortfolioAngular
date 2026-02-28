@@ -1,0 +1,60 @@
+<main class="card-body">
+  <section class="full-width">
+    <article class="panel">
+      <h2 class="panel-title">À propos</h2>
+
+      <ul class="bullet-list">
+        <li>Base de données (MS Access)</li>
+        <li>Projet en équipe • Cahier des charges client</li>
+      </ul>
+
+      <p>
+        Conception et exploitation d’une base de données à partir de tickets de caisse d’un magasin
+        pour permettre l’analyse et l’extraction d’indicateurs statistiques.
+      </p>
+
+      <div style="margin-top: 12px;">
+        <a class="btn small" routerLink="/">Home</a>
+      </div>
+    </article>
+  </section>
+
+  <section class="full-width">
+    <article class="panel">
+      <h2 class="panel-title">Images du Projet</h2>
+
+      <div class="projects-grid">
+        <article class="project-card" *ngFor="let src of images; let i = index">
+          <img class="project-cover"
+               [src]="src"
+               [alt]="'Image projet ' + (i + 1)"
+               (click)="openImage(src)"
+               (error)="onImgError($event)" />
+        </article>
+      </div>
+    </article>
+  </section>
+
+  <section class="full-width">
+    <article class="panel">
+      <h2 class="panel-title">Expériences</h2>
+
+      <ul class="bullet-list">
+        <li>Modélisation et création sous MS Access</li>
+        <li>Import, nettoyage et requêtes d’analyse</li>
+        <li>Restitution d’indicateurs selon le cahier des charges</li>
+      </ul>
+    </article>
+  </section>
+
+  <section class="full-width">
+    <app-contact></app-contact>
+  </section>
+  
+    <div class="image-lightbox" *ngIf="lightboxOpen" (click)="closeImage()">
+    <div class="image-lightbox-content" (click)="$event.stopPropagation()">
+      <button class="lightbox-close" (click)="closeImage()">✕</button>
+      <img [src]="lightboxImage" alt="Image projet agrandie" />
+    </div>
+  </div>
+</main>

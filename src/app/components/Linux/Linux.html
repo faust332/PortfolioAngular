@@ -1,0 +1,60 @@
+<main class="card-body">
+  <section class="full-width">
+    <article class="panel">
+      <h2 class="panel-title">À propos</h2>
+
+      <ul class="bullet-list">
+        <li><strong>Projet en binôme</strong></li>
+      </ul>
+
+      <p>
+        Mise en place d’une machine virtuelle Linux et configuration d’un environnement de développement,
+        incluant la gestion de la compilation séparée.
+      </p>
+
+      <div style="margin-top: 12px;">
+        <a class="btn small" routerLink="/">Home</a>
+      </div>
+    </article>
+  </section>
+
+  <section class="full-width">
+    <article class="panel">
+      <h2 class="panel-title">Images du Projet</h2>
+
+      <div class="projects-grid">
+        <article class="project-card" *ngFor="let src of images; let i = index">
+          <img class="project-cover"
+               [src]="src"
+               [alt]="'Image projet ' + (i + 1)"
+               (click)="openImage(src)"
+               (error)="onImgError($event)" />
+        </article>
+      </div>
+    </article>
+  </section>
+
+  <section class="full-width">
+    <article class="panel">
+      <h2 class="panel-title">Expériences</h2>
+
+      <p>Administration de base sous <strong>Linux</strong> :</p>
+      <ul class="bullet-list">
+        <li>Création et gestion de VM</li>
+        <li>Installation d’outils de dev et compilation séparée</li>
+        <li>Collaboration en binôme</li>
+      </ul>
+    </article>
+  </section>
+
+  <section class="full-width">
+    <app-contact></app-contact>
+  </section>
+  
+    <div class="image-lightbox" *ngIf="lightboxOpen" (click)="closeImage()">
+    <div class="image-lightbox-content" (click)="$event.stopPropagation()">
+      <button class="lightbox-close" (click)="closeImage()">✕</button>
+      <img [src]="lightboxImage" alt="Image projet agrandie" />
+    </div>
+  </div>
+</main>

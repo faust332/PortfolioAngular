@@ -1,0 +1,358 @@
+<ng-container *ngIf="isMain(); else routedPage">
+  <div class="page-bg">
+    <div class="neo-card">
+      <!-- HEADER : avatar + identité + logo -->
+      <header class="card-header">
+        <!-- Avatar -->
+        <div class="avatar-wrapper">
+          <div class="avatar-frame">
+            <img
+              class="avatar"
+              src="images/photo-Rayan.png"
+              alt="Photo de Rayan Zouaoui"
+            />
+          </div>
+        </div>
+
+        <!-- Identité + infos rapides -->
+        <div>
+          <div class="identity-top">
+            <p class="role">Développeur Full-Stack — Alternance Bac+5</p>
+            <h1 class="name">Rayan Zouaoui</h1>
+          </div>
+
+          <div class="identity-meta">
+            <div class="meta-group">
+              <span class="label">Téléphone</span>
+              <span class="value">
+                <a href="tel:+33670443933">06 70 44 39 33</a>
+              </span>
+            </div>
+            <div class="meta-group">
+              <span class="label">Email :</span>
+              <span class="value">
+                <a href="mailto:rayan.zouaoui92@gmail.com">rayan.zouaoui92@gmail.com</a>
+              </span>
+            </div>
+            <div class="meta-group">
+              <span class="label">Localisation</span>
+              <span class="value">Île-de-France</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Logo perso -->
+        <div class="logo-block">
+          <div class="logo-circle">RZ</div>
+          <div class="logo-text">
+            <span class="logo-title">PORTFOLIO</span>
+            <span class="logo-sub">Développeur</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- NAVIGATION  -->
+      <nav class="top-nav">
+        <a href="#intro"
+           onclick="document.getElementById('intro')?.scrollIntoView({behavior:'smooth', block:'start'}); return false;">Home</a>
+        <a href="#apropos"
+           onclick="document.getElementById('apropos')?.scrollIntoView({behavior:'smooth', block:'start'}); return false;">À propos</a>
+        <a href="#competences"
+           onclick="document.getElementById('competences')?.scrollIntoView({behavior:'smooth', block:'start'}); return false;">Compétences</a>
+        <a href="#experiences"
+           onclick="document.getElementById('experiences')?.scrollIntoView({behavior:'smooth', block:'start'}); return false;">Expériences</a>
+        <a href="#projets"
+           onclick="document.getElementById('projets')?.scrollIntoView({behavior:'smooth', block:'start'}); return false;">Projets</a>
+        <a href="#contact"
+           onclick="document.getElementById('contact')?.scrollIntoView({behavior:'smooth', block:'start'}); return false;">Contact</a>
+      </nav>
+
+      <div class="divider"></div>
+
+      <!-- CONTENU PRINCIPAL EN GRILLE -->
+      <main class="card-body" id="home">
+        <!-- HERO EN PLEINE LARGEUR -->
+        <section class="full-width">
+          <article class="panel hero-panel" id="intro">
+            <h2 class="panel-title">Développeur fullstack opérationnel</h2>
+            <p>
+              Prêt à contribuer immédiatement
+              <strong>sur vos projets</strong>.
+            </p>
+            <p>Alternance de 2 ans en bac+5 Informatique.</p>
+            <p>
+              <strong>Île-de-France</strong>.
+            </p>
+            <div class="hero-cta">
+              <a class="btn"
+                 href="#contact"
+                 onclick="document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); return false;">
+                Me contacter
+              </a>
+              <a class="btn ghost" href="documents/CV_Rayan_Zouaoui.pdf" download>
+                Télécharger mon CV (PDF)
+              </a>
+            </div>
+          </article>
+        </section>
+
+        <!-- COLONNE GAUCHE -->
+        <section class="column">
+          <!-- À propos -->
+          <article class="panel" id="apropos">
+            <h2 class="panel-title">À propos</h2>
+            <p>
+              Diplômé du BUT Informatique (IUT Paris Cité), avec deux stages chez Eiffage SI (automatisation de tests Java/Selenium/Gherkin et développement C#),
+              je recherche une alternance de 12 mois en Full-Stack Java & Angular. Je suis motivé pour monter en compétence, appliquer de bonnes pratiques et
+              participer à la réalisation de vos projets.
+            </p>
+          </article>
+
+          <!-- Expériences -->
+          <article class="panel" id="experiences">
+            <h2 class="panel-title">Expériences</h2>
+
+            <div class="experience-item">
+              <h3>Développeur automatisation — Eiffage Systèmes d’Information</h3>
+              <p>Mars 2025 – Juin 2025 — Saint-Ouen-sur-Seine</p>
+              <p><em>Java · Selenium · Gherkin</em></p>
+              <ul class="bullet-list">
+                <li>
+                  Conception et mise en place d’un outil de reprise de données
+                  avec scénarios de tests automatisés
+                </li>
+                <li>
+                  Exécution et validation de la reprise de données en production
+                </li>
+                <li>Développement et automatisation de tests applicatifs</li>
+              </ul>
+            </div>
+
+            <div class="experience-item">
+              <h3>Développeur C# — Eiffage Systèmes d’Information</h3>
+              <p>
+                Avril 2024 – Juin 2024 — Neuilly-sur-Marne / Saint-Ouen-sur-Seine
+              </p>
+              <p><em>C# · Visual Studio</em></p>
+              <p>
+                Mise en œuvre de décodeurs de capteurs pour évaluer l’état des
+                infrastructures.
+              </p>
+            </div>
+          </article>
+        </section>
+
+      <!-- COLONNE DROITE -->
+      <section class="column">
+        <!-- Compétences -->
+        <article class="panel" id="competences">
+          <h2 class="panel-title">Compétences</h2>
+      
+          <div class="skills-grid">
+            <div class="skill-block">
+              <div class="skill-title">Langages</div>
+              <div class="chips">
+                <span class="chip">C</span>
+                <span class="chip">C++</span>
+                <span class="chip">C#</span>
+                <span class="chip">Java</span>
+                <span class="chip">Python</span>
+              </div>
+            </div>
+      
+            <div class="skill-block">
+              <div class="skill-title">Web</div>
+              <div class="chips">
+                <span class="chip">HTML</span>
+                <span class="chip">CSS</span>
+                <span class="chip">JavaScript</span>
+                <span class="chip">TypeScript (bases)</span>
+                <span class="chip">PHP (notions)</span>
+              </div>
+            </div>
+      
+            <div class="skill-block">
+              <div class="skill-title">Frameworks</div>
+              <div class="chips">
+                <span class="chip">Angular <span class="chip-level">(bases)</span></span>
+                <span class="chip">Spring Boot <span class="chip-level">(API REST - bases)</span></span>
+              </div>
+            </div>
+          </div> <!-- fin skills-grid -->
+      
+          <div class="skills-2col">
+            <div>
+              <h3 class="subheading">Bases de données</h3>
+              <div class="chips left">
+                <span class="chip">MySQL</span>
+                <span class="chip">Microsoft Access</span>
+              </div>
+            </div>
+      
+            <div>
+              <h3 class="subheading">Outils de développement</h3>
+              <div class="chips left">
+                <span class="chip">Git</span>
+                <span class="chip">GitHub</span>
+                <span class="chip">IntelliJ IDEA</span>
+                <span class="chip">Eclipse</span>
+                <span class="chip">Visual Studio</span>
+                <span class="chip">Unity</span>
+              </div>
+            </div>
+      
+            <div>
+              <h3 class="subheading">Qualité & Sécurité</h3>
+              <div class="chips left">
+                <span class="chip">SonarQube</span>
+                <span class="chip">OWASP ZAP</span>
+                <span class="chip">Selenium</span>
+                <span class="chip">Gherkin</span>
+              </div>
+            </div>
+      
+            <div>
+              <h3 class="subheading">Systèmes</h3>
+              <div class="chips left">
+                <span class="chip">Windows</span>
+                <span class="chip">Linux (notions)</span>
+              </div>
+            </div>
+      
+            <div>
+              <h3 class="subheading">Langues</h3>
+              <div class="chips left">
+                <span class="chip">Anglais <span class="chip-level">(C1)</span></span>
+              </div>
+            </div>
+          </div> <!-- fin skills-2col -->
+      
+        </article>
+      </section>
+
+        <!-- PROJETS EN PLEINE LARGEUR AVEC IMAGES CLIQUABLES -->
+        <section class="full-width">
+          <article class="panel" id="projets">
+            <h2 class="panel-title">Projets</h2>
+
+            <div class="projects-grid">
+              <article class="project-card">
+                <h3 class="project-title">Jeu de combats (Windows & Web)</h3>
+                <img class="project-cover"
+                     src="images/combats/combatsp.png"
+                     alt="Jeu de combats C# Unity"
+                     (click)="openImage('images/combats/combatsp.png')" />
+                <div class="project-tags">
+                  <span class="tag-chip">C#</span>
+                  <span class="tag-chip">Unity</span>
+                  <span class="tag-chip">Sécurité</span>
+                </div>
+                <a class="btn small project-details" routerLink="/projets/jeu-combats">Détails</a>           
+              </article>
+
+              <article class="project-card">
+                <h3 class="project-title">Installation et configuration d’une machine virtuelle</h3>
+
+                <img class="project-cover"
+                     src="images/linux/linuxp.png"
+                     alt="Projet Linux"
+                     (click)="openImage('images/linux/linuxp.png')" />
+
+                <div class="project-tags">
+                  <span class="tag-chip">Linux</span>
+                  <span class="tag-chip">VirtualBox</span>
+                  <span class="tag-chip">VM</span>
+                </div>
+
+                <a class="btn small project-details" routerLink="/projets/Linux">Détails</a>
+              </article>
+
+              <article class="project-card">
+                <h3 class="project-title">
+                  Base de données — cahier des charges client
+                </h3>
+                <img class="project-cover"
+                     src="images/bdd/bddp.avif"
+                     alt="Projet base de données Access"
+                     (click)="openImage('images/bdd/bddp.avif')" />
+                <div class="project-tags">
+                  <span class="tag-chip">Access</span>
+                  <span class="tag-chip">SQL</span>
+                  <span class="tag-chip">Analyse</span>
+                </div>
+                <a class="btn small project-details" routerLink="/projets/bdd">Détails</a>
+              </article>
+
+              <article class="project-card">
+                <h3 class="project-title">Jeu « Le quart de singe »</h3>
+                <img class="project-cover"
+                     src="images/singe/singep.jpg"
+                     alt="Projet C++ quart de singe"
+                     (click)="openImage('images/singe/singep.jpg')" />
+                <div class="project-tags">
+                  <span class="tag-chip">C++</span>
+                  <span class="tag-chip">POO</span>
+                  <span class="tag-chip">Tests</span>
+                </div>
+                <a class="btn small project-details" routerLink="/projets/Singe">Détails</a>
+
+              </article>
+
+              <article class="project-card">
+                <h3 class="project-title">
+                  Application de gestion d’une formation
+                </h3>
+                <img class="project-cover"
+                     src="images/formation/formationp.jpg"
+                     alt="Projet C formation universitaire"
+                     (click)="openImage('images/formation/formationp.jpg')" />
+                <div class="project-tags">
+                  <span class="tag-chip">C</span>
+                </div>
+                <a class="btn small project-details" routerLink="/projets/formation">Détails</a>
+              </article>
+
+              <article class="project-card">
+                <h3 class="project-title">Jeu de vaisseau spatial</h3>
+
+                <img class="project-cover"
+                     src="images/vaisseau/vaisseaup.png"
+                     alt="Projet Python jeu de vaisseau"
+                     (click)="openImage('images/vaisseau/vaisseaup.png')" />
+
+                <div class="project-tags">
+                  <span class="tag-chip">Python</span>
+                  <span class="tag-chip">POO</span>
+                  <span class="tag-chip">Jeu</span>
+                </div>
+
+                <a class="btn small project-details" routerLink="/projets/Vaisseaux-spatiaux">Détails</a>
+              </article>
+            </div>
+          </article>
+        </section>
+        
+        <section class="full-width">
+          <app-contact></app-contact>
+        </section>
+
+      <!-- LIGHTBOX POUR LES IMAGES -->
+      <div class="image-lightbox" *ngIf="selectedImage()" (click)="closeImage()">
+        <div class="image-lightbox-content" (click)="$event.stopPropagation()">
+          <button class="lightbox-close" (click)="closeImage()">✕</button>
+          <img [src]="selectedImage()!" alt="Image projet agrandie" />
+        </div>
+       </div>
+      </main>         
+    </div>           
+  </div>            
+</ng-container>
+
+<!-- PAGE ROUTÉE -->
+<ng-template #routedPage>
+  <div class="page-bg">
+    <div class="neo-card">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</ng-template>

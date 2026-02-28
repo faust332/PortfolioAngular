@@ -1,0 +1,81 @@
+<main class="card-body">
+  <section class="full-width">
+    <article class="panel">
+      <h2 class="panel-title">À propos</h2>
+
+      <ul class="bullet-list">
+        <li><strong>Raitoshi</strong> : jeu vidéo de combat gladiateur</li>
+        <li>Projet individuel (<strong>Unity / C#</strong>)</li>
+      </ul>
+
+      <p>
+        Jeu d’action où le joueur incarne un gladiateur combattant des monstres dans une arène.
+        Fonctionnalités : déplacements, sauts, attaques à l’épée, ennemis avec points de vie,
+        décors dynamiques et objets collectables. Évolutions : compétences débloquables,
+        portage Web (WebGL) et sécurisation du code.
+      </p>
+    </article>
+  </section>
+  
+  <section class="full-width">
+    <article class="panel">
+      <h2 class="panel-title">Images du Projet</h2>
+
+      <div class="projects-grid">
+        <article class="project-card" *ngFor="let src of images; let i = index">
+          <img
+            class="project-cover"
+            [src]="src"
+            [alt]="'Image projet ' + (i + 1)"
+            (click)="openImage(src)"
+            (error)="onImgError($event)"
+          />
+        </article>
+      </div>
+    </article>
+  </section>
+
+  <section class="full-width">
+    <article class="panel">
+      <h2 class="panel-title">Expériences</h2>
+
+      <p>Développement d’un jeu vidéo en <strong>C#</strong> sous <strong>Unity</strong> :</p>
+      <ul class="bullet-list">
+        <li>Système de combat et scripts modulaires</li>
+        <li>Portage Web (Netlify) et sécurisation (SonarQube, OWASP ZAP)</li>
+        <li>Expérience complète du prototype à la mise en ligne sécurisée</li>
+      </ul>
+      
+      <div class="project-actions">                               
+          <!-- Source du projet -->
+           <div class="project-actions-top">
+                <a class="btn small" routerLink="/">Home</a>
+                <a class="btn small ghost"
+                   href="https://github.com/faust332/SAE-Raitoshi"
+                   target="_blank"
+                   rel="noopener">
+                   GitHub
+                </a>
+              
+                <a class="btn small ghost"
+                   href="https://raitoshi.netlify.app"
+                   target="_blank"
+                   rel="noopener">
+                  Site Web du jeu
+                </a>
+            </div>
+        </div>
+    </article>
+  </section>
+
+  <div class="image-lightbox" *ngIf="lightboxOpen" (click)="closeImage()">
+    <div class="image-lightbox-content" (click)="$event.stopPropagation()">
+      <button class="lightbox-close" (click)="closeImage()">✕</button>
+      <img [src]="lightboxImage" alt="Image projet agrandie" />
+    </div>
+  </div>
+
+  <section class="full-width">
+    <app-contact></app-contact>
+  </section>
+</main>

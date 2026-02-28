@@ -1,0 +1,55 @@
+<main class="card-body">
+  <section class="full-width">
+    <article class="panel">
+      <h2 class="panel-title">À propos</h2>
+
+      <ul class="bullet-list">
+        <li>Jeu « Quart de singe »</li>
+        <li>Projet en C++ (binôme)</li>
+      </ul>
+
+      <p>
+        Jeu où les joueurs (humains ou robot) annoncent des lettres à tour de rôle pour compléter un mot.
+        Le but est d’éviter de terminer un mot existant afin de ne pas perdre la partie.
+      </p>
+
+      <div style="margin-top: 12px;">
+        <a class="btn small" routerLink="/">Home</a>
+      </div>
+    </article>
+  </section>
+
+  <section class="full-width">
+    <article class="panel">
+      <h2 class="panel-title">Images du Projet</h2>
+
+      <div class="projects-grid">
+        <article class="project-card" *ngFor="let src of images; let i = index">
+          <img class="project-cover"
+               [src]="src"
+               [alt]="'Image projet ' + (i + 1)"
+               (click)="openImage(src)"
+               (error)="onImgError($event)" />
+        </article>
+      </div>
+    </article>
+  </section>
+
+  <section class="full-width">
+    <article class="panel">
+      <h2 class="panel-title">Expériences</h2>
+
+      <p>Programmation orientée objet en <strong>C++</strong> :</p>
+      <ul class="bullet-list">
+        <li>Développement d’un robot jouant automatiquement</li>
+        <li>Mise en place de tests unitaires</li>
+        <li>Travail collaboratif en binôme</li>
+        <li>→ Expérience en IA simple et structuration de code.</li>
+      </ul>
+    </article>
+  </section>
+
+   <section class="full-width">
+    <app-contact></app-contact>
+  </section>
+</main>

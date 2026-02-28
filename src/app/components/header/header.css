@@ -1,0 +1,26 @@
+header {
+  background: #0a192f;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0
+;
+  z-index: 10;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+a {
+  color: #00bcd4;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+a:hover {
+  color: #80deea;
+  text-shadow: 0 0 8px #00e5ff;
+}

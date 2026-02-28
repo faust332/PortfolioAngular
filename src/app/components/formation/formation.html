@@ -1,0 +1,62 @@
+<main class="card-body">
+  <section class="full-width">
+    <article class="panel">
+      <h2 class="panel-title">À propos</h2>
+
+      <ul class="bullet-list">
+        <li>Application de gestion d’une formation universitaire</li>
+        <li>Projet individuel en C</li>
+      </ul>
+
+      <p>
+        Développement d’un interpréteur de commandes permettant de gérer une formation :
+        structure des cours, gestion des étudiants, attribution des notes, génération des relevés
+        et décisions de jury.
+      </p>
+
+      <div style="margin-top: 12px;">
+        <a class="btn small" routerLink="/">Home</a>
+      </div>
+    </article>
+  </section>
+
+  <section class="full-width">
+    <article class="panel">
+      <h2 class="panel-title">Images du Projet</h2>
+
+      <div class="projects-grid">
+        <article class="project-card" *ngFor="let src of images; let i = index">
+          <img class="project-cover"
+               [src]="src"
+               [alt]="'Image projet ' + (i + 1)"
+               (click)="openImage(src)"
+               (error)="onImgError($event)" />
+        </article>
+      </div>
+    </article>
+  </section>
+
+  <section class="full-width">
+    <article class="panel">
+      <h2 class="panel-title">Expériences</h2>
+
+      <p>Programmation en <strong>C</strong> :</p>
+      <ul class="bullet-list">
+        <li>Développement d’un interpréteur de commandes</li>
+        <li>Gestion de données et logique métier</li>
+        <li>Importance des tests au fil des sprints</li>
+      </ul>
+    </article>
+  </section>
+
+  <section class="full-width">
+    <app-contact></app-contact>
+  </section>
+  
+    <div class="image-lightbox" *ngIf="lightboxOpen" (click)="closeImage()">
+    <div class="image-lightbox-content" (click)="$event.stopPropagation()">
+      <button class="lightbox-close" (click)="closeImage()">✕</button>
+      <img [src]="lightboxImage" alt="Image projet agrandie" />
+    </div>
+  </div>
+</main>

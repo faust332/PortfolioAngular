@@ -1,0 +1,10 @@
+.image-lightbox{
+  z-index: 99999;     /* plus haut que tout */
+}
+
+.image-lightbox-content{
+  z-index: 100000;
+}
+.neo-card, .panel{
+  transform: none !important;
+}

@@ -1,0 +1,62 @@
+<main class="card-body">
+  <section class="full-width">
+    <article class="panel">
+      <h2 class="panel-title">À propos</h2>
+
+      <ul class="bullet-list">
+        <li>Jeu de Vaisseaux Spatiaux</li>
+        <li>Projet en Python (Terminale)</li>
+      </ul>
+
+      <p>
+        Jeu d’arcade où le joueur contrôle un vaisseau et doit détruire un maximum d’ennemis.
+        Le joueur dispose de trois vies, les ennemis accélèrent avec le score et le décor évolue
+        en fonction des niveaux.
+      </p>
+
+      <div style="margin-top: 12px;">
+        <a class="btn small" routerLink="/">Home</a>
+      </div>
+    </article>
+  </section>
+
+  <section class="full-width">
+    <article class="panel">
+      <h2 class="panel-title">Images du Projet</h2>
+
+      <div class="projects-grid">
+        <article class="project-card" *ngFor="let src of images; let i = index">
+          <img class="project-cover"
+               [src]="src"
+               [alt]="'Image projet ' + (i + 1)"
+               (click)="openImage(src)"
+               (error)="onImgError($event)" />
+        </article>
+      </div>
+    </article>
+  </section>
+
+  <section class="full-width">
+    <article class="panel">
+      <h2 class="panel-title">Expériences</h2>
+
+      <p>Apprentissage du Python orienté objet :</p>
+      <ul class="bullet-list">
+        <li>Utilisation des classes et gestion des collisions</li>
+        <li>Logique de progression (score, difficulté, décors)</li>
+        <li>→ Première expérience de conception de jeu complet qui a été réaliser.</li>
+      </ul>
+    </article>
+  </section>
+
+  <section class="full-width">
+    <app-contact></app-contact>
+  </section>
+
+  <img-grandir #lb></img-grandir>
+  <img
+    src="assets/mon-image.jpg"
+    (click)="lb.openImage('assets/mon-image.jpg')"
+  />
+    
+</main>
