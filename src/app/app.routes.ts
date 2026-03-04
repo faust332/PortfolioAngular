@@ -22,14 +22,12 @@ export const routes: Routes = [
       import('./components/Linux/Linux').then((m) => m.LinuxComponent),
   },
 
-  // ✅ page dédiée au projet "Singe"
   {
     path: 'projets/Singe',
     loadComponent: () =>
       import('./components/Singe/Singe').then((m) => m.SingeComponent),
   },
 
-  // ✅ page dédiée au projet "Vaisseaux spatiaux"
   {
     path: 'projets/Vaisseaux-spatiaux',
     loadComponent: () =>
@@ -37,7 +35,6 @@ export const routes: Routes = [
         .then((m) => m.VaisseauxSpatiauxComponent),
   },
 
-  // ✅ page dédiée au projet "bdd"
   {
     path: 'projets/bdd',
     loadComponent: () =>
@@ -45,7 +42,6 @@ export const routes: Routes = [
         .then((m) => m.bddComponent),
   },
 
-  // ✅ page dédiée au projet "formation"
   {
     path: 'projets/formation',
     loadComponent: () =>
