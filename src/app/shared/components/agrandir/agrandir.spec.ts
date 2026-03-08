@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Agrandir } from './agrandir';
+import { AgrandirComponent } from './agrandir';
 
 describe('Agrandir', () => {
-  let component: Agrandir;
-  let fixture: ComponentFixture<Agrandir>;
+  let component: AgrandirComponent;
+  let fixture: ComponentFixture<AgrandirComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Agrandir]
+      imports: [AgrandirComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(Agrandir);
+    fixture = TestBed.createComponent(AgrandirComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -21,4 +21,3 @@ describe('Agrandir', () => {
     expect(component).toBeTruthy();
   });
 });
-

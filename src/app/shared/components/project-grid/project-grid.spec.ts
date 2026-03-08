@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LinuxComponent } from './Linux';
+import { ProjectGridComponent } from './project-grid';
 
-describe('Linux', () => {
-  let component: LinuxComponent;
-  let fixture: ComponentFixture<LinuxComponent>;
+describe('ProjectGrid', () => {
+  let component: ProjectGridComponent;
+  let fixture: ComponentFixture<ProjectGridComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [LinuxComponent]
+      imports: [ProjectGridComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(LinuxComponent);
+    fixture = TestBed.createComponent(ProjectGridComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

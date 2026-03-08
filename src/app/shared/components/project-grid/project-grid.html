@@ -1,0 +1,19 @@
+<div class="projects-grid">
+  @for (src of images; track src; let i = $index) {
+    <article class="project-card">
+      <button
+        type="button"
+        class="project-cover-btn"
+        (click)="openImage(src)"
+        [attr.aria-label]="'Ouvrir le projet ' + (i + 1)">
+        <img
+          class="project-cover"
+          [src]="src"
+          [alt]="'Projet ' + (i + 1)"
+          (error)="onImgError($event)" />
+      </button>
+    </article>
+  }
+</div>
+
+<img-grandir #lb />

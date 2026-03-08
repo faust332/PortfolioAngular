@@ -1,30 +1,19 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { NgFor } from '@angular/common';
-import { ContactComponent } from '../contact/contact';
-import { AgrandirComponent } from '../agrandir/agrandir';
-
+import { ContactComponent } from '../../shared/components/contact/contact';
+import { ProjectGridComponent } from '../../shared/components/project-grid/project-grid';
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [RouterLink, NgFor, ContactComponent, AgrandirComponent],
+  imports: [RouterLink, ContactComponent, ProjectGridComponent],
   templateUrl: './about.html',
   styleUrl: './about.css',
 })
 export class AboutComponent {
-  @ViewChild('lb') lb!: AgrandirComponent;
-  readonly base = 'images/combats';
-
+  readonly base = `images/combats`;
   readonly images = [
-    'combats1.png',
-    'combats2.png',
-    'combats3.png',
-    'combats4.png',
-    'combats5.png',
-    'combats6.png',
+    'combats1.png', 'combats2.png', 'combats3.png',
+    'combats4.png', 'combats5.png', 'combats6.png',
   ].map((f) => `${this.base}/${f}`);
-  
-  openImage(src: string) { this.lb.openImage(src); }
-  onImgError(ev: Event) { console.log('Image not found:', (ev.target as HTMLImageElement).src); }
 }

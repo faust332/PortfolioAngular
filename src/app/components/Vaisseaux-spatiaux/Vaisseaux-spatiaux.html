@@ -24,21 +24,7 @@
     <article class="panel">
       <h2 class="panel-title">Images du Projet</h2>
 
-      <div class="projects-grid">
-        <article class="project-card" *ngFor="let src of images; let i = index">
-          <button
-            type="button"
-            class="project-cover-btn"
-            (click)="openImage(src)"
-            [attr.aria-label]="'Ouvrir le projet ' + (i + 1)">
-            <img
-              class="project-cover"
-              [src]="src"
-              [alt]="'Projet ' + (i + 1)"
-              (error)="onImgError($event)" />
-          </button>
-        </article>
-      </div>
+      <app-project-grid [images]="images" />
     </article>
   </section>
 
@@ -58,7 +44,5 @@
   <section class="full-width">
     <app-contact></app-contact>
   </section>
-
-  <img-grandir #lb></img-grandir>
 
 </main>
