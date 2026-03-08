@@ -1,13 +1,13 @@
 import { Component, ViewChild} from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { NgFor, NgIf } from '@angular/common';
+import { NgFor } from '@angular/common';
 import { ContactComponent } from '../contact/contact';
 import { AgrandirComponent } from '../agrandir/agrandir';
 
 @Component({
   selector: 'app-Singe',
   standalone: true,
-  imports: [RouterLink, NgFor, NgIf, ContactComponent, AgrandirComponent],
+  imports: [RouterLink, NgFor, ContactComponent, AgrandirComponent],
   templateUrl: './Singe.html',
   styleUrl: './Singe.css',
 })
