@@ -5,7 +5,7 @@
     role="button"
     tabindex="0"
     aria-label="Fermer l’aperçu"
-    (click.self)="closeImage()"
+    (click)="!$any($event.target).closest('.image-lightbox-content') && closeImage()"
     (keydown.enter)="closeImage()"
     (keydown.space)="closeImage(); $event.preventDefault()">
     <div class="image-lightbox-content">
