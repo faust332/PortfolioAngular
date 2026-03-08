@@ -1,9 +1,19 @@
 <section class="agrandir">
-  <div class="image-lightbox" *ngIf="lightboxOpen" (click)="closeImage()">
-    <div class="image-lightbox-content" (click)="$event.stopPropagation()">
-      <button class="lightbox-close" (click)="closeImage()">✕</button>
-      <img [src]="lightboxImage" alt="Image projet agrandie" />
+  <div
+    class="image-lightbox"
+    *ngIf="lightboxOpen"
+    (click)="closeImage()"
+    (keydown.enter)="closeImage()"
+    (keydown.space)="closeImage()"
+    tabindex="0">
+    <div
+      class="image-lightbox-content"
+      (click)="$event.stopPropagation()"
+      (keydown.enter)="$event.stopPropagation()"
+      (keydown.space)="$event.stopPropagation()"
+      tabindex="0">
+      <button class="lightbox-close" (click)="closeImage()">×</button>
+      <img [src]="lightboxImage" alt="Projet agrandi" />
     </div>
   </div>
 </section>
-
