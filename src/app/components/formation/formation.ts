@@ -11,7 +11,7 @@ import { AgrandirComponent } from '../agrandir/agrandir';
   templateUrl: './formation.html',
   styleUrl: './formation.css',
 })
-export class formationComponent {
+export class FormationComponent {
   @ViewChild('lb') lb!: AgrandirComponent;
   readonly base = 'images/formation';
 
