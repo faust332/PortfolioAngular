@@ -6,7 +6,7 @@ import {
   signal,
   ViewChild
 } from '@angular/core';
-import { NgFor, NgIf } from '@angular/common';
+import { NgIf } from '@angular/common';
 import { NavigationEnd, Router, RouterOutlet, RouterLink } from '@angular/router';
 import { filter } from 'rxjs/operators';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
@@ -25,9 +25,9 @@ export class App {
   @ViewChild('lb') lb!: AgrandirComponent;
   // Affichage page principale vs pages routées
   isMain = signal(true);
-
-  private router = inject(Router);
-  private destroyRef = inject(DestroyRef);
+  
+  private readonly router = inject(Router);
+  private readonly destroyRef = inject(DestroyRef);
 
   constructor() {
     const setMain = (url: string) => {
