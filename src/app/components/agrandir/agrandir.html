@@ -2,7 +2,6 @@
   <div
     class="image-lightbox"
     *ngIf="lightboxOpen"
-    role="button"
     tabindex="0"
     aria-label="Fermer l’aperçu"
     (click)="!$any($event.target).closest('.image-lightbox-content') && closeImage()"
