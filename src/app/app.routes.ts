@@ -39,14 +39,14 @@ export const routes: Routes = [
     path: 'projets/bdd',
     loadComponent: () =>
       import('./components/bdd/bdd')
-        .then((m) => m.bddComponent),
+        .then((m) => m.BddComponent),
   },
 
   {
     path: 'projets/formation',
     loadComponent: () =>
       import('./components/formation/formation')
-        .then((m) => m.formationComponent),
+        .then((m) => m.FormationComponent),
   },
 
 
