@@ -5,14 +5,11 @@
     role="button"
     tabindex="0"
     aria-label="Fermer l’aperçu"
-    (click)="closeImage()"
+    (click.self)="closeImage()"
     (keydown.enter)="closeImage()"
     (keydown.space)="closeImage(); $event.preventDefault()">
     <div class="image-lightbox-content">
-      <img
-        [src]="lightboxImage"
-        alt="Projet agrandi"
-        (click)="$event.stopPropagation()" />
+      <img [src]="lightboxImage" alt="Projet agrandi" />
     </div>
   </div>
 </section>
