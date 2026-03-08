@@ -11,7 +11,7 @@ import { AgrandirComponent } from '../agrandir/agrandir';
   templateUrl: './bdd.html',
   styleUrl: './bdd.css',
 })
-export class bddComponent {
+export class BddComponent {
   @ViewChild('lb') lb!: AgrandirComponent;
 
   readonly base = 'images/bdd';
