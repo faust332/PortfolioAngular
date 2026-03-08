@@ -2,16 +2,10 @@
   <div
     class="image-lightbox"
     *ngIf="lightboxOpen"
-    (click)="closeImage()"
-    (keydown.enter)="closeImage()"
-    (keydown.space)="closeImage()"
-    tabindex="0">
+    (click)="closeImage()">
     <div
       class="image-lightbox-content"
-      (click)="$event.stopPropagation()"
-      (keydown.enter)="$event.stopPropagation()"
-      (keydown.space)="$event.stopPropagation()"
-      tabindex="0">
+      (click)="$event.stopPropagation()">
       <button class="lightbox-close" (click)="closeImage()">×</button>
       <img [src]="lightboxImage" alt="Projet agrandi" />
     </div>
