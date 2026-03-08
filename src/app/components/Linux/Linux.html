@@ -24,11 +24,17 @@
 
       <div class="projects-grid">
         <article class="project-card" *ngFor="let src of images; let i = index">
-          <img class="project-cover"
-               [src]="src"
-               [alt]="'Image projet ' + (i + 1)"
-               (click)="openImage(src)"
-               (error)="onImgError($event)" />
+          <button
+            type="button"
+            class="project-cover-btn"
+            (click)="openImage(src)"
+            [attr.aria-label]="'Ouvrir le projet ' + (i + 1)">
+            <img
+              class="project-cover"
+              [src]="src"
+              [alt]="'Projet ' + (i + 1)"
+              (error)="onImgError($event)" />
+          </button>
         </article>
       </div>
     </article>
