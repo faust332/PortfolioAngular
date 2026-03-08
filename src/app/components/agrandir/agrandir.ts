@@ -4,7 +4,7 @@ import { NgIf } from '@angular/common';
 @Component({
   selector: 'img-grandir',
   standalone: true,
-  imports: [NgIf, AgrandirComponent],
+  imports: [NgIf],
   templateUrl: './agrandir.html',
   styleUrl: './agrandir.css',
 })
