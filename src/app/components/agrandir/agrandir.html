@@ -1,15 +1,18 @@
 <section class="agrandir">
-  <div class="image-lightbox" *ngIf="lightboxOpen">
-    <button
-      type="button"
-      class="image-lightbox-overlay"
-      (click)="closeImage()"
-      aria-label="Fermer l’aperçu">
-    </button>
-
-    <img
-      class="image-lightbox-image"
-      [src]="lightboxImage"
-      alt="Projet agrandi" />
+  <div
+    class="image-lightbox"
+    *ngIf="lightboxOpen"
+    role="button"
+    tabindex="0"
+    aria-label="Fermer l’aperçu"
+    (click)="closeImage()"
+    (keydown.enter)="closeImage()"
+    (keydown.space)="closeImage(); $event.preventDefault()">
+    <div class="image-lightbox-content">
+      <img
+        [src]="lightboxImage"
+        alt="Projet agrandi"
+        (click)="$event.stopPropagation()" />
+    </div>
   </div>
 </section>
