@@ -7,8 +7,8 @@ import { ProjectGridComponent } from '../../components/project-grid/project-grid
   selector: 'app-Linux',
   standalone: true,
   imports: [RouterLink, ContactComponent, ProjectGridComponent],
-  templateUrl: './Linux.html',
-  styleUrl: './Linux.css',
+  templateUrl: './linux.html',
+  styleUrl: './linux.css',
 })
 export class LinuxComponent {
   readonly base = 'images/linux';

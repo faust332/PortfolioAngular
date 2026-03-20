@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { VaisseauxSpatiauxComponent } from './Vaisseaux-spatiaux';
+import { VaisseauxSpatiauxComponent } from './vaisseaux-spatiaux';
 
 describe('VaisseauxSpatiauxComponent', () => {
   let component: VaisseauxSpatiauxComponent;
