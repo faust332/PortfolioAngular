@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { ContactComponent } from '../../shared/components/contact/contact';
-import { ProjectGridComponent } from '../../shared/components/project-grid/project-grid';
+import { ContactComponent } from '../../components/contact/contact';
+import { ProjectGridComponent } from '../../components/project-grid/project-grid';
 
 @Component({
   selector: 'app-vaisseaux-spatiaux',
   standalone: true,
   imports: [RouterLink, ContactComponent, ProjectGridComponent],
-  templateUrl: './Vaisseaux-spatiaux.html',
-  styleUrl: './Vaisseaux-spatiaux.css',
+  templateUrl: './vaisseaux-spatiaux.html',
+  styleUrl: './vaisseaux-spatiaux.css',
 })
 export class VaisseauxSpatiauxComponent {
   readonly base = 'images/vaisseau';

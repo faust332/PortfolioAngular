@@ -1,7 +1,7 @@
 import { Component} from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { ContactComponent } from '../../shared/components/contact/contact';
-import { ProjectGridComponent } from '../../shared/components/project-grid/project-grid';
+import { ContactComponent } from '../../components/contact/contact';
+import { ProjectGridComponent } from '../../components/project-grid/project-grid';
 
 @Component({
   selector: 'app-bdd',
