@@ -74,7 +74,7 @@ PortfolioAngular-main/
 Cloner le projet :
 
 ```bash
-git clone <url-du-repo>
+git clone https://github.com/faust332/PortfolioAngular.git
 cd PortfolioAngular-main
 ```
 
