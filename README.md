@@ -31,7 +31,7 @@ Ce projet m’a permis de découvrir la structure d’une application front-end,
 ## Structure du projet
 
 ```text
-PortfolioAngular-main/
+PortfolioAngular/
 ├── public/
 │   ├── documents/        # CV et documents
 │   └── images/           # Images du portfolio
@@ -75,7 +75,7 @@ Cloner le projet :
 
 ```bash
 git clone https://github.com/faust332/PortfolioAngular.git
-cd PortfolioAngular-main
+cd PortfolioAngular
 ```
 
 Installer les dépendances :
