@@ -50,7 +50,6 @@ PortfolioAngular/
 │   │   ├── components/   # Composants réutilisables
 │   │   │   ├── agrandir/
 │   │   │   ├── contact/
-│   │   │   ├── header/
 │   │   │   └── project-grid/
 │   │   │
 │   │   ├── app.ts
