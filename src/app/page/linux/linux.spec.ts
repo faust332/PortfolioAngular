@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LinuxComponent } from './Linux';
+import { LinuxComponent } from './linux';
 
 describe('Linux', () => {
   let component: LinuxComponent;
