@@ -121,7 +121,9 @@ Le projet est configuré pour un déploiement via Netlify grâce au fichier :
 ```
 netlify.toml
 ```
-
+```
+https://rayan-zouaoui.netlify.app/
+```
 ---
 
 ## Compétences démontrées
