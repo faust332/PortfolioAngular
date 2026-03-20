@@ -13,39 +13,39 @@ export const routes: Routes = [
   {
     path: 'projets/jeu-combats',
     loadComponent: () =>
-      import('./components/about/about').then((m) => m.AboutComponent),
+      import('./page/about/about').then((m) => m.AboutComponent),
   },
 
   {
     path: 'projets/Linux',
     loadComponent: () =>
-      import('./components/Linux/Linux').then((m) => m.LinuxComponent),
+      import('./page/linux/linux').then((m) => m.LinuxComponent),
   },
 
   {
     path: 'projets/Singe',
     loadComponent: () =>
-      import('./components/Singe/Singe').then((m) => m.SingeComponent),
+      import('./page/singe/singe').then((m) => m.SingeComponent),
   },
 
   {
     path: 'projets/Vaisseaux-spatiaux',
     loadComponent: () =>
-      import('./components/Vaisseaux-spatiaux/Vaisseaux-spatiaux')
+      import('./page/vaisseaux-spatiaux/Vaisseaux-spatiaux')
         .then((m) => m.VaisseauxSpatiauxComponent),
   },
 
   {
     path: 'projets/bdd',
     loadComponent: () =>
-      import('./components/bdd/bdd')
+      import('./page/bdd/bdd')
         .then((m) => m.BddComponent),
   },
 
   {
     path: 'projets/formation',
     loadComponent: () =>
-      import('./components/formation/formation')
+      import('./page/formation/formation')
         .then((m) => m.FormationComponent),
   },
 

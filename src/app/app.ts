@@ -10,8 +10,8 @@ import { NgIf } from '@angular/common';
 import { NavigationEnd, Router, RouterOutlet, RouterLink } from '@angular/router';
 import { filter } from 'rxjs/operators';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { ContactComponent } from './shared/components/contact/contact';
-import { AgrandirComponent } from './shared/components/agrandir/agrandir';
+import { ContactComponent } from './components/contact/contact';
+import { AgrandirComponent } from './components/agrandir/agrandir';
 
 @Component({
   selector: 'app-root',
