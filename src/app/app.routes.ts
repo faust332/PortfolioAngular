@@ -31,7 +31,7 @@ export const routes: Routes = [
   {
     path: 'projets/Vaisseaux-spatiaux',
     loadComponent: () =>
-      import('./page/vaisseaux-spatiaux/Vaisseaux-spatiaux')
+      import('./page/vaisseaux-spatiaux/vaisseaux-spatiaux')
         .then((m) => m.VaisseauxSpatiauxComponent),
   },
 
