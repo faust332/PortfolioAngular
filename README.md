@@ -1,59 +1,136 @@
-# CapsuleDevlab
+# Portfolio Angular – CapsuleDevLab
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.7.
+## Description
 
-## Development server
+Portfolio web développé avec Angular dans le cadre de mon apprentissage du framework et de TypeScript.
 
-To start a local development server, run:
+Ce projet m’a permis de découvrir la structure d’une application front-end, d’organiser des composants et de mettre en place un site web fonctionnel.
+
+---
+
+## Objectifs
+
+* Découvrir Angular et TypeScript
+* Concevoir un site web avec Angular
+* Comprendre l’organisation d’une application front-end
+* Mettre en pratique les bases du développement web
+* Disposer d’un portfolio pour des candidatures (alternance / université)
+
+---
+
+## Technologies utilisées
+
+* Angular
+* TypeScript
+* HTML5 / CSS3
+* Node.js / npm
+* Netlify
+
+---
+
+## Structure du projet
+
+```text
+PortfolioAngular/
+├── public/
+│   ├── documents/        # CV et documents
+│   └── images/           # Images du portfolio
+│
+├── src/
+│   ├── app/
+│   │   ├── pages/        # Sections principales du site
+│   │   │   ├── about/
+│   │   │   ├── bdd/
+│   │   │   ├── formation/
+│   │   │   ├── linux/
+│   │   │   ├── singe/
+│   │   │   ├── skills/
+│   │   │   └── vaisseaux-spatiaux/
+│   │   │
+│   │   ├── components/   # Composants réutilisables
+│   │   │   ├── agrandir/
+│   │   │   ├── contact/
+│   │   │   └── project-grid/
+│   │   │
+│   │   ├── app.ts
+│   │   ├── app.routes.ts
+│   │   └── app.config.ts
+│   │
+│   ├── index.html
+│   ├── main.ts
+│   └── styles.css
+│
+├── angular.json
+├── package.json
+├── tsconfig.json
+└── netlify.toml
+```
+
+---
+
+## Installation
+
+Cloner le projet :
+
+```bash
+git clone https://github.com/faust332/PortfolioAngular.git
+cd PortfolioAngular
+```
+
+Installer les dépendances :
+
+```bash
+npm install
+```
+
+---
+
+## Lancer le projet
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Puis ouvrir :
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```
+http://localhost:4200/
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+## Build de production
 
 ```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Les fichiers générés seront disponibles dans le dossier :
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
+```
+dist/
 ```
 
-## Running end-to-end tests
+---
 
-For end-to-end (e2e) testing, run:
+## Déploiement
 
-```bash
-ng e2e
+Le projet est configuré pour un déploiement via Netlify grâce au fichier :
+
 ```
+netlify.toml
+```
+```
+https://rayan-zouaoui.netlify.app/
+```
+---
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## Compétences démontrées
 
-## Additional Resources
+* Découverte et prise en main d’Angular
+* Utilisation de TypeScript
+* Structuration d’une application front-end
+* Organisation d’un projet web
+* Déploiement d’une application
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+---
